@@ -7,9 +7,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<link rel="stylesheet" href="assets/css/normalize.css">
-	<link rel="stylesheet" href="assets/css/vendor/choices.min.css" />
+	<link rel="stylesheet" href="assets/css/vendor/choices.min.css">
 	<link rel="stylesheet" href="assets/css/style.css">
 	<script defer src="assets/js/vendor/choices.min.js"></script>
+	<script defer src="assets/js/main.js"></script>
 </head>
 
 <body>
@@ -33,43 +34,74 @@
 						<input class="form__input" id="last_name" type="text" name="name">
 					</div>
 					<div class="form__item">
-						<label class="form__label" for="">Nationality</label>
-						<select name="select">
-							<option value="value1">Значение 1</option>
-							<option value="value2" selected>Значение 2</option>
-							<option value="value3">Значение 3</option>
+						<label class="form__label" for="nationality">Nationality</label>
+						<select class="js-choice" name="select" id="nationality">
+							<option value="value1">American</option>
+							<option value="value2">Russian</option>
+							<option value="value1">American</option>
+							<option value="value2">Russian</option>
+							<option value="value1">American</option>
+							<option value="value2">Russian</option>
+							<option value="value2">Russian</option>
+							<option value="value1">American</option>
+							<option value="value2">Russian</option>
+							<option value="value2">Russian</option>
+							<option value="value2">Russian</option>
+							<option value="value1">American</option>
+							<option value="value2">Russian</option>
 						</select>
 					</div>
 					<div class="form__item">
 						<label class="form__label" for="mail">E-mail</label>
 						<input class="form__input" id="mail" type="email" name="email">
 					</div>
-					<div class="form__item">
-						<label class="form__label" for="">Date of Birth</label>
-						<input class="form__input" type="date" name="name">
+					<div class="form__item ">
+						<fieldset class="fieldset ">
+							<legend class="fieldset__legend birthday">Date of Birth</legend>
+							<div class="fieldset__list birth-date">
+								<select class="fieldset__select js-choice" name="day" id="day">
+									<option value="value1">21</option>
+									<option value="value2">2</option>
+									<option value="value3">3</option>
+								</select>
+								<select class="fieldset__select js-choice" name="month" id="month">
+									<option value="value1">December</option>
+									<option value="value2">December</option>
+									<option value="value3">December</option>
+								</select>
+								<select class="fieldset__select js-choice" name="year" id="year">
+									<option value="value1">1995</option>
+									<option value="value2">2022</option>
+									<option value="value3">2021</option>
+								</select>
+							</div>
+						</fieldset>
 					</div>
 					<div class="form__item">
 						<fieldset class="fieldset">
 							<legend class="fieldset__legend">Gender</legend>
-							<div class="fieldset__list">
-								<div class="fieldset__item">
-									<input class="fieldset__input" id="male" type="radio" name="male">
-									<label class="fieldset__label" for="male">male</label>
+							<div class="fieldset__list radio">
+								<div class="radio__item">
+									<input class="radio__btn" id="male" type="radio" name="gender">
+									<span class="radio__box"></span>
+
+									<label class="radio__label" for="male">Male</label>
 								</div>
-								<div class="fieldset__item">
-									<input class="fieldset__input" id="female" type="radio" name="female">
-									<label class="fieldset__label" for="female">Female</label>
+								<div class="radio__item">
+									<input class="radio__btn" id="female" type="radio" name="gender">
+									<span class="radio__box"></span>
+									<label class="radio__label" for="female">Female</label>
 								</div>
 							</div>
 						</fieldset>
 					</div>
 					<div class="form__item">
 						<label class="form__label" for="password">Password</label>
-						<input class="form__input" id="password" type="password" name="password">
+						<input class="form__input password" id="password" type="password" name="password">
 					</div>
 					<div class="form__item">
 						<label class="form__label" for="confirm_password">Confirm Password</label>
-						<input class="form__input" id="confirm_password" type="password" name="confirm_password">
+						<input class="form__input password" id="confirm_password" type="password" name="confirm_password">
 					</div>
 				</div>
 				<div class="form__complete complete">
