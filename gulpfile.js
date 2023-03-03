@@ -33,6 +33,8 @@ const path = {
 		html: srcPath + '**/*.html',
 		css: srcPath + 'assets/scss/**/*.scss',
 		js: srcPath + 'assets/js/**/*.js',
+		vendorJS: srcPath + 'assets/js/vendor/**/*.js',
+		vendorCSS: srcPath + 'assets/css/vendor/**/*.css',
 		images: srcPath + 'assets/images/**/*.{jpeg,png,svg,ico}',
 		fonts: srcPath + 'assets/fonts/**/*.{woff,woff2}'
 	},
@@ -66,7 +68,9 @@ function css() {
 			}
 		}))
 		.pipe(sass())
-		.pipe(autoprefixer())
+		.pipe(autoprefixer({
+			cascade: false,
+		}))
 		.pipe(dest(path.build.css))
 		// .pipe(cssnano({
 		// 	zindex: false,
@@ -113,6 +117,17 @@ function fonts() {
 
 };
 
+const vendorJS = () => {
+	return src('src/assets/js/vendor/**')
+		.pipe(dest('dist/assets/js/vendor/'));
+}
+
+const vendorCSS = () => {
+	return src('src/assets/css/vendor/**')
+		.pipe(dest('dist/assets/css/vendor/'));
+}
+
+
 function clean() {
 	return del(path.clean)
 };
@@ -120,20 +135,22 @@ function clean() {
 function watchFiles() {
 	gulp.watch([path.watch.html], html);
 	gulp.watch([path.watch.css], css);
+	gulp.watch([path.watch.vendorCSS], vendorCSS);
 	gulp.watch([path.watch.js], js);
+	gulp.watch([path.watch.vendorJS], vendorJS);
 	gulp.watch([path.watch.images], images);
 	gulp.watch([path.watch.fonts], fonts);
 }
 
-const build = gulp.series(clean, gulp.parallel(html, js, css, images, fonts));
+const build = gulp.series(clean, gulp.parallel(html, js, vendorJS, css, vendorCSS, images, fonts));
 const watch = gulp.parallel(build, watchFiles, serve);
 
-exports.html = html;
-exports.css = css;
-exports.js = js;
-exports.images = images;
-exports.fonts = fonts;
-exports.clean = clean;
-exports.build = build;
-exports.watch = watch;
+// exports.html = html;
+// exports.css = css;
+// exports.js = js;
+// exports.images = images;
+// exports.fonts = fonts;
+// exports.clean = clean;
+// exports.build = build;
+// exports.watch = watch;
 exports.default = watch;
