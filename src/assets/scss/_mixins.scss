@@ -1,0 +1,17 @@
+@import '_variables.scss';
+
+@mixin text ($color: $text-color) {
+	font-family: 'Work Sans';
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+	color: $color;
+}
+
+@mixin text-light ($color: $gray) {
+	font-family: 'Work Sans';
+	font-weight: 300;
+	font-size: 12px;
+	line-height: 14px;
+	color: $color;
+}

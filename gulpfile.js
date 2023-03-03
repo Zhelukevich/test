@@ -68,14 +68,14 @@ function css() {
 		.pipe(sass())
 		.pipe(autoprefixer())
 		.pipe(dest(path.build.css))
-		.pipe(cssnano({
-			zindex: false,
-			discardComments: {
-				removeAll: true
-			}
-		}
-		))
-		.pipe(dest(path.build.css))
+		// .pipe(cssnano({
+		// 	zindex: false,
+		// 	discardComments: {
+		// 		removeAll: true
+		// 	}
+		// }
+		// ))
+		// .pipe(dest(path.build.css))
 		.pipe(browserSync.reload({ stream: true }))
 };
 
@@ -108,7 +108,9 @@ function images() {
 
 function fonts() {
 	return src(path.src.fonts, { base: srcPath + 'assets/fonts/' })
+		.pipe(dest(path.build.fonts))
 		.pipe(browserSync.reload({ stream: true }))
+
 };
 
 function clean() {

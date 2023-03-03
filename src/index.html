@@ -10,9 +10,72 @@
 </head>
 
 <body>
-	<div>привет
+	<div class="signup">
+		<div class="signup__background">
+			<h1 class="signup__title">Sign up</h1>
+		</div>
+		<div class="signup__form form">
+			<hgroup>
+				<h2 class="form__title">New user? </h2>
+				<p class="form__descr">Use the form below to create your account.</p>
+			</hgroup>
+			<form class="form__block" action="#">
+				<div class="form__List">
+					<div class="form__item">
+						<label class="form__label" for="first_name">First Name</label>
+						<input class="form__input" id="first_name" type="text" name="name">
+					</div>
+					<div class="form__item">
+						<label class="form__label" for="last_name">Last Name</label>
+						<input class="form__input" id="last_name" type="text" name="name">
+					</div>
+					<div class="form__item">
+						<label class="form__label" for="">Nationality</label>
+						<select name="select">
+							<option value="value1">Значение 1</option>
+							<option value="value2" selected>Значение 2</option>
+							<option value="value3">Значение 3</option>
+						</select>
+					</div>
+					<div class="form__item">
+						<label class="form__label" for="mail">E-mail</label>
+						<input class="form__input" id="mail" type="email" name="email">
+					</div>
+					<div class="form__item">
+						<label class="form__label" for="">Date of Birth</label>
+						<input class="form__input" type="date" name="name">
+					</div>
+					<div class="form__item">
+						<fieldset class="fieldset">
+							<legend class="fieldset__legend">Gender</legend>
+							<div class="fieldset__list">
+								<div class="fieldset__item">
+									<input class="fieldset__input" id="male" type="radio" name="male">
+									<label class="fieldset__label" for="male">male</label>
+								</div>
+								<div class="fieldset__item">
+									<input class="fieldset__input" id="female" type="radio" name="female">
+									<label class="fieldset__label" for="female">Female</label>
+								</div>
+							</div>
+						</fieldset>
+					</div>
+					<div class="form__item">
+						<label class="form__label" for="password">Password</label>
+						<input class="form__input" id="password" type="password" name="password">
+					</div>
+					<div class="form__item">
+						<label class="form__label" for="confirm_password">Confirm Password</label>
+						<input class="form__input" id="confirm_password" type="password" name="confirm_password">
+					</div>
+				</div>
+				<div class="form__complete complete">
+					<p class="complete__Login">Have an account? <a class="complete__link" href="#">Login</a></p>
+					<button class="complete__btn">Complete Signup</button>
+				</div>
 
-
+			</form>
+		</div>
 	</div>
 </body>
 
