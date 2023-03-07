@@ -72,14 +72,14 @@ function css() {
 			cascade: false,
 		}))
 		.pipe(dest(path.build.css))
-		// .pipe(cssnano({
-		// 	zindex: false,
-		// 	discardComments: {
-		// 		removeAll: true
-		// 	}
-		// }
-		// ))
-		// .pipe(dest(path.build.css))
+		.pipe(cssnano({
+			zindex: false,
+			discardComments: {
+				removeAll: true
+			}
+		}
+		))
+		.pipe(dest(path.build.css))
 		.pipe(browserSync.reload({ stream: true }))
 };
 
@@ -126,7 +126,6 @@ const vendorCSS = () => {
 	return src('src/assets/css/vendor/**')
 		.pipe(dest('dist/assets/css/vendor/'));
 }
-
 
 function clean() {
 	return del(path.clean)

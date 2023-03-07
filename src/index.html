@@ -19,97 +19,124 @@
 			<h1 class="signup__title">Sign up</h1>
 		</div>
 		<div class="signup__form form">
-			<hgroup>
-				<h2 class="form__title">New user? </h2>
-				<p class="form__descr">Use the form below to create your account.</p>
-			</hgroup>
-			<form class="form__block" action="#">
-				<div class="form__List">
-					<div class="form__item">
-						<label class="form__label" for="first_name">First Name</label>
-						<input class="form__input" id="first_name" type="text" name="name">
-					</div>
-					<div class="form__item">
-						<label class="form__label" for="last_name">Last Name</label>
-						<input class="form__input" id="last_name" type="text" name="name">
-					</div>
-					<div class="form__item">
-						<label class="form__label" for="nationality">Nationality</label>
-						<select class="js-choice" name="select" id="nationality">
-							<option value="value1">American</option>
-							<option value="value2">Russian</option>
-							<option value="value1">American</option>
-							<option value="value2">Russian</option>
-							<option value="value1">American</option>
-							<option value="value2">Russian</option>
-							<option value="value2">Russian</option>
-							<option value="value1">American</option>
-							<option value="value2">Russian</option>
-							<option value="value2">Russian</option>
-							<option value="value2">Russian</option>
-							<option value="value1">American</option>
-							<option value="value2">Russian</option>
-						</select>
-					</div>
-					<div class="form__item">
-						<label class="form__label" for="mail">E-mail</label>
-						<input class="form__input" id="mail" type="email" name="email">
-					</div>
-					<div class="form__item ">
-						<fieldset class="fieldset ">
-							<legend class="fieldset__legend birthday">Date of Birth</legend>
-							<div class="fieldset__list birth-date">
-								<select class="fieldset__select js-choice" name="day" id="day">
-									<option value="value1">21</option>
-									<option value="value2">2</option>
-									<option value="value3">3</option>
-								</select>
-								<select class="fieldset__select js-choice" name="month" id="month">
-									<option value="value1">December</option>
-									<option value="value2">December</option>
-									<option value="value3">December</option>
-								</select>
-								<select class="fieldset__select js-choice" name="year" id="year">
-									<option value="value1">1995</option>
-									<option value="value2">2022</option>
-									<option value="value3">2021</option>
-								</select>
-							</div>
-						</fieldset>
-					</div>
-					<div class="form__item">
-						<fieldset class="fieldset">
-							<legend class="fieldset__legend">Gender</legend>
-							<div class="fieldset__list radio">
-								<div class="radio__item">
-									<input class="radio__btn" id="male" type="radio" name="gender">
-									<span class="radio__box"></span>
+			<svg class="svg" width="434" height="431" viewBox="0 0 434 431" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path fill-rule="evenodd" clip-rule="evenodd"
+					d="M11 213.5C11 326.764 103.236 419 216.5 419C262.521 419 305.07 403.773 339.371 378.094C340.5 377.455 341.531 376.667 342.438 375.754C390.812 338.113 422 279.362 422 213.5C422 100.236 329.764 8 216.5 8C103.236 8 11 100.236 11 213.5ZM345.44 333.901C346.35 339.725 346.879 345.683 347 351.749V356.533C347 359.881 347 362.751 346.521 366.578C346.295 370.201 344.781 373.394 342.438 375.754C341.423 376.543 340.401 377.324 339.371 378.094C337.253 379.294 334.791 379.972 332.159 379.972H331.202C323.063 379.494 317.318 372.318 317.797 364.665C317.797 363.164 317.928 361.664 318.053 360.232C318.131 359.336 318.207 358.468 318.247 357.643C328.103 350.665 337.215 342.703 345.44 333.901ZM88.2988 334.686C58.3746 303.047 40 260.377 40 213.5C40 116.186 119.186 37 216.5 37C313.814 37 393 116.186 393 213.5C393 259.99 374.927 302.343 345.44 333.901C335.506 270.367 280.17 222.712 214.39 224.027C149.589 225.313 97.0983 273.111 88.2988 334.686ZM88.2988 334.686C96.6155 343.48 105.824 351.421 115.779 358.363C115.802 360.196 115.892 362.163 116.25 364.665C116.728 372.797 110.984 379.494 102.845 379.972C94.7067 380.451 88.0044 374.71 87.5256 366.578C87.0469 362.751 87.0469 359.403 87.0469 356.533C86.8485 349.1 87.282 341.801 88.2988 334.686ZM115.779 358.363C115.771 357.743 115.771 357.138 115.771 356.533V352.227C116.728 296.259 163.166 251.771 219.178 253.207C275.19 254.163 319.712 300.564 318.276 356.533C318.276 356.892 318.265 357.263 318.247 357.643C289.471 378.016 254.357 390 216.5 390C179.091 390 144.361 378.298 115.779 358.363ZM158 150.5C158 182.339 183.661 208 215.5 208C247.339 208 273 182.339 273 150.5C273 118.661 247.339 93 215.5 93C183.661 93 158 118.661 158 150.5ZM187 151.5C187 135.057 200.057 122 216.5 122C232.943 122 246 135.057 246 151.5C246 167.943 232.943 181 216.5 181C200.057 181 187 167.943 187 151.5Z"
+					fill="#F9FAFF" />
+				<path class="animPath"
+					d="M119.582 383.064C120.548 391.757 134.707 396.312 141.863 396.312C149.612 396.312 156.143 403.538 164.144 403.538C174.822 403.538 185.23 405.947 196.06 405.947C205.494 405.947 214.928 405.947 224.362 405.947C229.861 405.947 234.803 403.828 240.019 403.538C244.059 403.314 250.242 402.543 253.869 400.527C257.38 398.577 263.176 398.326 267.118 397.45C271.138 396.556 274.505 394.129 278.559 393.903C287.342 393.416 298.049 389.097 305.657 384.871C309.387 382.798 310.741 382.28 313.486 378.849C316.539 375.032 322.166 374.01 325.53 371.02C328.581 368.308 331.327 365.758 334.228 362.857C336.496 360.589 335.165 353.155 335.165 349.944C335.165 346.356 332.664 339.782 330.949 336.696C328.841 332.901 329.55 327.074 327.671 322.846C324.081 314.768 320.638 306.319 315.225 299.36C313.555 297.213 299.617 278.471 299.97 278.016C303.11 273.979 289.637 263.469 286.454 262.56C282.799 261.516 280.141 256.605 275.548 256.605C271.097 256.605 268.095 252.992 264.107 252.992C256.189 252.992 249.118 246.559 241.893 244.494C234.387 242.35 226.845 240.216 218.34 239.744C209.513 239.253 200.65 240.948 192.447 240.948C189.562 240.948 185.737 243.812 182.878 244.628C179.535 245.584 170.884 249.767 168.025 252.055C165.252 254.273 161.478 254.846 158.122 256.337C154.88 257.778 151.325 261.796 147.885 262.56C141.201 264.045 135.033 273.673 130.421 278.284C127.754 280.952 123.981 284.474 122.258 287.919C120.922 290.591 118.579 298.356 116.571 299.962C114.219 301.844 112.356 309.751 112.356 312.608C112.356 317.552 110.999 321.985 109.01 326.459C105.518 334.317 106.916 343.74 102.721 351.081C97.8414 359.62 91.1623 356.474 84.9229 351.483C82.1005 349.225 79.6524 346.078 77.1614 343.587C74.501 340.927 71.3516 338.433 68.9985 335.491C64.5089 329.88 58.3075 323.811 54.8137 316.824C51.7098 310.616 44.5005 303.644 42.5692 296.885C41.4893 293.105 39.8584 288.968 38.9561 284.908C38.0452 280.809 34.3097 277.751 34.0717 273.466C33.4859 262.922 28.0499 252.265 28.0499 241.55C28.0499 232.332 25.6411 222.194 25.6411 213.248C25.6411 203.891 26.0476 196.433 28.1837 187.889C30.8965 177.038 37.3131 166.486 42.2347 156.642C44.1027 152.906 44.2878 149.37 47.5874 146.071C48.8913 144.767 48.5239 143.093 49.7285 141.588C51.8278 138.964 52.8402 139.578 53.4086 135.031C54.1474 129.12 53.7663 126.514 52.2042 121.046C50.3675 114.618 58.9022 112.892 61.5046 108.467C62.8203 106.231 64.8516 103.745 67.125 102.446C68.2219 101.819 72.9525 98.4948 73.5483 97.6281C74.2415 96.6199 75.8494 93.1759 76.8938 92.8775C78.4638 92.429 74.3937 72.5268 74.6189 68.9239C74.714 67.4011 83.1395 66.3903 84.6553 66.3145C88.9835 66.0981 92.386 62.549 96.2976 60.8279C102.548 58.0777 112.765 55.8705 118.11 51.5944C122.717 47.9085 129.358 45.642 134.971 43.6991C140.397 41.8211 145.488 38.6139 151.431 38.6139C164.291 38.6139 176.182 28.7735 189.168 27.7746C203.744 26.6534 218.281 25.3658 233.261 25.3658C239.77 25.3658 247.41 27.8592 253.936 29.0459C263.074 30.7073 271.528 33.5804 280.433 35.9375C287.799 37.8876 294.27 38.5619 301.442 41.9594C305.772 44.0106 309.691 46.2949 314.088 48.2489C323.853 52.5889 336.653 57.1871 342.123 67.5188C344.331 71.6899 351.01 75.9582 354.434 79.5625C359.967 85.3859 363.872 93.0009 368.419 99.5685C372.252 105.105 377.636 109.393 380.931 115.158C384.143 120.781 386.217 127.537 390.298 131.618C394.625 135.945 394.123 147.538 396.32 153.029C398.975 159.667 400.32 167.086 402.007 174.173C405.316 188.071 408.631 199.626 408.631 214.184C408.631 221.812 408.631 229.44 408.631 237.068C408.631 242.455 409.062 251.014 406.825 255.936C402.762 264.873 398.439 275.495 395.651 284.975C392.556 295.498 387.575 305.564 382.135 315.084C377.641 322.949 373.759 334.075 367.683 340.911C364.454 344.543 364.069 350.936 364.069 342.383C364.069 334.845 364.069 327.306 364.069 319.768C364.069 307.647 356.262 299.143 355.639 287.919C355.3 281.824 351.058 275.076 349.885 268.916C348.925 263.88 347.102 260.162 345.402 255.401C344.032 251.566 344.199 247.282 342.993 243.424C339.196 231.273 331.724 222.243 324.994 211.776C315.562 197.103 301.793 185.558 293.681 170.493C290.412 164.422 283.373 158.975 280.968 152.36C278.972 146.872 274.319 142.232 270.396 138.309C256.107 124.02 239.656 106.059 218.073 106.059C213.375 106.059 208.578 105.783 203.888 106.059C200.26 106.272 196.01 111.528 193.651 113.887C190.342 117.196 187.011 120.961 184.083 124.726C180.138 129.799 179.899 137.363 177.927 143.394C175.627 150.43 173.779 160.405 173.779 167.749C173.779 172.608 171.348 177.638 172.708 182.737C176.258 196.048 190.997 196.387 202.684 196.387C208.393 196.387 214.103 196.387 219.813 196.387C226.547 196.387 229.723 194.33 235.336 190.9C238.144 189.184 240.794 186.782 243.632 185.28C246.091 183.978 245.589 181.982 247.781 180.73C251.255 178.745 252.377 173.948 255.676 172.299"
+					stroke="#fff" stroke-width="50" stroke-linecap="round" />
+			</svg>
+			<div class="form__success success" style="display: none;">
+				<hgroup class="success__hgroup">
+					<h2 class="success__title">Thank You!
+					</h2>
+					<p class="success__descr">you registered!</p>
+				</hgroup>
+				<p class="success__Login">Have an account? <a class="success__link" href="#">Login</a></p>
+			</div>
 
-									<label class="radio__label" for="male">Male</label>
+			<div class="form__registered">
+				<hgroup>
+					<h2 class="form__title">New user?
+						New user?
+					</h2>
+					<p class="form__descr">Use the form below to create your account.
+					</p>
+				</hgroup>
+				<form class="form__block" id="form" novalidate>
+					<div class="form__List">
+						<div class="form__item">
+							<label class="form__label" for="first_name">First Name</label>
+							<input class="form__input _req" id="first_name" type="text" name="name">
+							<span class="error-text"></span>
+						</div>
+						<div class="form__item">
+							<label class="form__label" for="last_name">Last Name</label>
+							<input class="form__input _req" id="last_name" type="text" name="name">
+							<span class="error-text"></span>
+						</div>
+						<div class="form__item">
+							<label class="form__label" for="nationality">Nationality</label>
+							<select class="js-choice" name="select" id="nationality">
+								<option value="value1">American</option>
+								<option value="value2">Russian</option>
+								<option value="value1">B</option>
+								<option value="value2">Russian</option>
+								<option value="value1">American</option>
+								<option value="value2">Russian</option>
+								<option value="value2">Russian</option>
+								<option value="value1">American</option>
+								<option value="value2">Russian</option>
+								<option value="value2">Russian</option>
+								<option value="value2">Russian</option>
+								<option value="value1">American</option>
+								<option value="value2">Russian</option>
+							</select>
+						</div>
+						<div class="form__item">
+							<label class="form__label" for="mail">E-mail</label>
+							<input class="form__input _req _email" id="mail" type="email" name="email">
+							<span class="error-text"></span>
+						</div>
+						<div class="form__item ">
+							<fieldset class="fieldset ">
+								<legend class="fieldset__legend birthday">Date of Birth</legend>
+								<div class="fieldset__list birth-date">
+									<select class="fieldset__select js-choice" name="day" id="day">
+										<option value="value1">21</option>
+										<option value="value2">2</option>
+										<option value="value3">3</option>
+									</select>
+									<select class="fieldset__select js-choice" name="month" id="month">
+										<option value="value1">December</option>
+										<option value="value2">December</option>
+										<option value="value3">December</option>
+									</select>
+									<select class="fieldset__select js-choice" name="year" id="year">
+										<option value="value1">1995</option>
+										<option value="value2">2022</option>
+										<option value="value3">2021</option>
+									</select>
 								</div>
-								<div class="radio__item">
-									<input class="radio__btn" id="female" type="radio" name="gender">
-									<span class="radio__box"></span>
-									<label class="radio__label" for="female">Female</label>
-								</div>
-							</div>
-						</fieldset>
-					</div>
-					<div class="form__item">
-						<label class="form__label" for="password">Password</label>
-						<input class="form__input password" id="password" type="password" name="password">
-					</div>
-					<div class="form__item">
-						<label class="form__label" for="confirm_password">Confirm Password</label>
-						<input class="form__input password" id="confirm_password" type="password" name="confirm_password">
-					</div>
-				</div>
-				<div class="form__complete complete">
-					<p class="complete__Login">Have an account? <a class="complete__link" href="#">Login</a></p>
-					<button class="complete__btn">Complete Signup</button>
-				</div>
+							</fieldset>
+						</div>
+						<div class="form__item">
+							<fieldset class="fieldset">
+								<legend class="fieldset__legend">Gender</legend>
+								<div class="fieldset__list radio">
+									<div class="radio__item">
+										<input class="radio__btn" id="male" type="radio" name="gender" checked>
+										<span class="radio__box"></span>
 
-			</form>
+										<label class="radio__label" for="male">Male</label>
+									</div>
+									<div class="radio__item">
+										<input class="radio__btn" id="female" type="radio" name="gender">
+										<span class="radio__box"></span>
+										<label class="radio__label" for="female">Female</label>
+									</div>
+								</div>
+							</fieldset>
+						</div>
+						<div class="form__item">
+							<label class="form__label" for="password">Password</label>
+							<input class="form__input password _req _password" id="password" type="password" name="password">
+							<span class="error-text"></span>
+						</div>
+						<div class="form__item">
+							<label class="form__label" for="confirm_password">Confirm Password</label>
+							<input class="form__input password _req _password" id="confirm_password" type="password"
+								name="confirm_password">
+						</div>
+					</div>
+					<div class="form__complete complete">
+						<p class="complete__Login">Have an account? <a class="complete__link" href="#">Login</a></p>
+						<button class="complete__btn">Complete Signup</button>
+					</div>
+				</form>
+			</div>
+
 		</div>
 	</div>
 </body>
