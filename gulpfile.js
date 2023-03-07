@@ -68,10 +68,10 @@ function css() {
 			}
 		}))
 		.pipe(sass())
-		.pipe(autoprefixer({
-			cascade: false,
-		}))
 		.pipe(dest(path.build.css))
+		.pipe(autoprefixer({
+			browsers: ['last 3 versions']
+		}))
 		.pipe(cssnano({
 			zindex: false,
 			discardComments: {

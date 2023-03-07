@@ -1,5 +1,6 @@
 
 const form = document.getElementById('form');
+const completeBtn = document.querySelector('.complete__btn');
 
 form.addEventListener('submit', (event) => {
 	event.preventDefault();
@@ -10,74 +11,73 @@ form.addEventListener('submit', (event) => {
 		form.reset();
 		success.style.display = 'block'
 		registered.style.display = 'none'
+	} else {
+		btnAnimation()
 	}
 
 });
 
+function btnAnimation() {
+	completeBtn.classList.add('btn-animation')
+	completeBtn.addEventListener("animationend", AnimationHandler, false);
+	function AnimationHandler() {
+		completeBtn.classList.remove('btn-animation');
 
+	}
+}
 
 function validatorForm(form) {
 	let result = true;
 	let formReq = document.querySelectorAll('._req');
 	let password = document.getElementById('password');
 	let confirm_password = document.getElementById('confirm_password');
-	let errorText = document.querySelector('.error-text');
+
+	function removeError(input) {
+		const parent = input.parentNode;
+		if (input.classList.contains('_error')) {
+			parent.querySelector('.error-text').remove()
+			input.classList.remove('_error')
+		}
+	}
+
+	function createError(input, text) {
+		const parent = input.parentNode;
+		const errorBlock = document.createElement('span');
+
+		errorBlock.classList.add('error-text');
+		errorBlock.textContent = text;
+
+		parent.querySelector('._req').classList.add('_error');
+
+		parent.append(errorBlock);
+	}
 
 	formReq.forEach(input => {
-		formRemoveError(input);
+		removeError(input);
+
 		if (input.classList.contains('_email')) {
-
 			if (emailTest(input)) {
-				try {
-					formAddError(input);
-					result = false;
-					throw new TypeError('E-mail не по шаблону');
-				} catch (e) {
-					errorText.textContent = e.message
-				}
+				createError(input, 'E-mail не по шаблону!')
+				result = false;
 			}
-
 		} else if (input.classList.contains('_password')) {
 			if (passwordTest(input)) {
-				try {
-					formAddError(input);
-					result = false;
-					throw new TypeError('От 8 символов, заглавные и строчные буквы, а также цифры');
-				} catch (e) {
-					errorText.textContent = e.message
-				}
-			}
-		} else {
-			if (input.value === '') {
-				formAddError(input);
+				createError(input, 'От 8 символов, заглавные и строчные буквы, цифры')
 				result = false;
-
+			} else if (password.value !== confirm_password.value) {
+				createError(input, 'Пароль не совпадает!')
+				result = false;
 			}
+		} else if (input.value === '') {
+			createError(input, 'Поле не заполнено!')
+			result = false;
+
 		}
 	})
 
-	if (password.value !== confirm_password.value) {
-		try {
-			formAddError(password);
-			formAddError(confirm_password)
-			result = false;
-			throw new TypeError('Не совпадает');
-		} catch (e) {
-			errorText.textContent = e.message
-		}
 
-	}
 
 	return result
-}
-
-
-function formAddError(input) {
-	input.classList.add('_error');
-}
-
-function formRemoveError(input) {
-	input.classList.remove('_error');
 }
 
 function emailTest(input) {
