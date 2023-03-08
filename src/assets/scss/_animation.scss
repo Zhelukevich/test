@@ -34,6 +34,8 @@
 }
 
 .form__item:nth-child(3) {
+	position: relative;
+	z-index: 60;
 	transform: translateY(58px);
 	opacity: 0;
 	animation: item-1 .5s linear forwards;
@@ -48,6 +50,8 @@
 }
 
 .form__item:nth-child(5) {
+	position: relative;
+	z-index: 50;
 	transform: translateY(58px);
 	opacity: 0;
 	animation: item-1 .5s linear forwards;

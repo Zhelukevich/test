@@ -3,6 +3,7 @@ element.forEach(el => {
 	new Choices(el, {
 		searchEnabled: false,
 		itemSelectText: '',
+		shouldSort: false,
 	});
 });
 
