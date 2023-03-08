@@ -1,4 +1,31 @@
 
+const requestURL = 'https://jsonplaceholder.typicode.com/users';
+
+function sendRequest(method, url, body = null) {
+	return new Promise((resolve, reject) => {
+		const xhr = new XMLHttpRequest();
+
+		xhr.open(method, url);
+
+		xhr.responseType = 'json';
+		xhr.setRequestHeader('ContentType', 'application/json');
+
+		xhr.onload = () => {
+			if (xhr.status >= 400) {
+				reject(xhr.response);
+			} else {
+				resolve(xhr.response);
+			}
+		}
+
+		xhr.onerror = () => {
+			reject(xhr.response)
+		}
+
+		xhr.send(JSON.stringify(body));
+	})
+}
+
 const form = document.getElementById('form');
 const completeBtn = document.querySelector('.complete__btn');
 
@@ -8,14 +35,51 @@ form.addEventListener('submit', (event) => {
 	const registered = document.querySelector('.form__registered');
 
 	if (validatorForm(this) == true) {
-		form.reset();
-		success.style.display = 'block'
-		registered.style.display = 'none'
+		sendRequest('POST', requestURL, users())
+			.then(() => {
+				event.target.reset();
+				success.style.display = 'block'
+				registered.style.display = 'none'
+			})
+			.catch(err => console.log(err))
+
 	} else {
 		btnAnimation()
 	}
 
 });
+
+function users() {
+	const firstName = document.getElementById('first_name');
+	const lastName = document.getElementById('last_name');
+	const mail = document.getElementById('mail');
+	const password = document.getElementById('password');
+	const nationality = document.getElementById('nationality');
+	const gender = document.querySelectorAll('.-gender');
+
+	const day = document.getElementById('day').value;
+	const month = document.getElementById('month').value;
+	const year = document.getElementById('year').value;
+
+	gender.forEach((el) => {
+		if (el.checked) {
+			genderValue = el.value
+		}
+	});
+
+	const data = {
+		firstName: firstName.value,
+		lastName: lastName.value,
+		nationality: nationality.value,
+		email: mail.value,
+		birthday: new Date(year, month, day),
+		gender: genderValue,
+		password: password.value,
+	}
+
+	return data
+}
+
 
 function btnAnimation() {
 	completeBtn.classList.add('btn-animation')
@@ -74,8 +138,6 @@ function validatorForm(form) {
 
 		}
 	})
-
-
 
 	return result
 }

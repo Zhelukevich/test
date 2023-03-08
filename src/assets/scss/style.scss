@@ -4,6 +4,8 @@
 @import '_mixins.scss';
 @import '_select.scss';
 @import'_radio_btn.scss';
+@import '_animation.scss';
+
 
 body {
 	width: 100%;
@@ -45,25 +47,6 @@ body {
 			transform: rotate(180deg);
 			writing-mode: vertical-rl;
 
-		}
-	}
-
-	.svg {
-		position: absolute;
-		bottom: -68px;
-		left: 210px;
-
-		.animPath {
-			stroke-dasharray: 2181px;
-			stroke-dashoffset: 0;
-			animation: anim-line 2s linear forwards;
-			animation-delay: 4.5s;
-		}
-
-		@keyframes anim-line {
-			to {
-				stroke-dashoffset: -2181px;
-			}
 		}
 	}
 
@@ -165,7 +148,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	height: 100%;
-	z-index: 7;
+	z-index: 1;
 }
 
 .form__List {
@@ -181,6 +164,7 @@ body {
 		width: 100%;
 		display: flex;
 		flex-direction: column;
+		z-index: 1;
 
 		.fieldset__legend {
 			@include text-light ($color: $gray);
@@ -221,78 +205,11 @@ body {
 			left: 0;
 			font-size: 10px;
 			color: $red;
-			z-index: 6;
+			z-index: 1;
 		}
 	}
 }
 
-// animation
-.form__item:nth-child(1) {
-	transform: translateY(58px);
-	opacity: 0;
-	animation: item-1 .5s linear forwards;
-	animation-delay: .5s;
-}
-
-.form__item:nth-child(2) {
-	transform: translateY(58px);
-	opacity: 0;
-	animation: item-1 .5s linear forwards;
-	animation-delay: 1s;
-}
-
-.form__item:nth-child(3) {
-	transform: translateY(58px);
-	opacity: 0;
-	animation: item-1 .5s linear forwards;
-	animation-delay: 1.5s;
-}
-
-.form__item:nth-child(4) {
-	transform: translateY(58px);
-	opacity: 0;
-	animation: item-1 .5s linear forwards;
-	animation-delay: 2s;
-}
-
-.form__item:nth-child(5) {
-	transform: translateY(58px);
-	opacity: 0;
-	animation: item-1 .5s linear forwards;
-	animation-delay: 2.5s;
-}
-
-.form__item:nth-child(6) {
-	transform: translateY(58px);
-	opacity: 0;
-	animation: item-1 .5s linear forwards;
-	animation-delay: 3s;
-}
-
-.form__item:nth-child(7) {
-	transform: translateY(58px);
-	opacity: 0;
-	animation: item-1 .5s linear forwards;
-	animation-delay: 3.5s;
-}
-
-.form__item:nth-child(8) {
-	transform: translateY(58px);
-	opacity: 0;
-	animation: item-1 .5s linear forwards;
-	animation-delay: 4s;
-}
-
-@keyframes item-1 {
-	to {
-		transform: translateY(0);
-		opacity: 1;
-	}
-}
-
-
-
-// 
 
 @media (max-width:768px) {
 	.form__List {
@@ -370,46 +287,6 @@ body {
 		line-height: 18px;
 		color: $white;
 		transition: all 0.2s ease-in;
-	}
-
-	// btn-animation 
-
-	.btn-animation {
-		animation: cycle 1.5s linear forwards;
-	}
-
-	@keyframes cycle {
-		0% {
-			transform: rotate(0) translate(0, 0);
-		}
-
-		10% {
-			transform: rotate(5deg) translate(0, -2px);
-		}
-
-		15% {
-			transform: rotate(-3deg) translate(0, -2px);
-		}
-
-		20% {
-			transform: rotate(5deg) translate(0, -2px);
-		}
-
-		25% {
-			transform: rotate(-3deg) translate(0, -2px);
-		}
-
-		30% {
-			transform: rotate(5deg) translate(0, -2px);
-		}
-
-		35% {
-			transform: rotate(-3deg) translate(0, -2px);
-		}
-
-		40% {
-			transform: rotate(0) translate(0, 0);
-		}
 	}
 
 	.complete__btn:hover {

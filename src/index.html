@@ -6,7 +6,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<link rel="stylesheet" href="assets/css/normalize.css">
 	<link rel="stylesheet" href="assets/css/vendor/choices.min.css">
 	<link rel="stylesheet" href="assets/css/style.css">
 	<script defer src="assets/js/vendor/choices.min.js"></script>
@@ -57,19 +56,12 @@
 						<div class="form__item">
 							<label class="form__label" for="nationality">Nationality</label>
 							<select class="js-choice" name="select" id="nationality">
-								<option value="value1">American</option>
-								<option value="value2">Russian</option>
-								<option value="value1">B</option>
-								<option value="value2">Russian</option>
-								<option value="value1">American</option>
-								<option value="value2">Russian</option>
-								<option value="value2">Russian</option>
-								<option value="value1">American</option>
-								<option value="value2">Russian</option>
-								<option value="value2">Russian</option>
-								<option value="value2">Russian</option>
-								<option value="value1">American</option>
-								<option value="value2">Russian</option>
+								<option value="">nationality</option>
+								<option value="American">American</option>
+								<option value="Russian">Russian</option>
+								<option value="Belarus">Belarus</option>
+								<option value="German">German</option>
+								<option value="Polack">Polack</option>
 							</select>
 						</div>
 						<div class="form__item">
@@ -81,19 +73,22 @@
 								<legend class="fieldset__legend birthday">Date of Birth</legend>
 								<div class="fieldset__list birth-date">
 									<select class="fieldset__select js-choice" name="day" id="day">
-										<option value="value1">21</option>
-										<option value="value2">2</option>
-										<option value="value3">3</option>
+										<option value="">day</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
 									</select>
 									<select class="fieldset__select js-choice" name="month" id="month">
-										<option value="value1">December</option>
-										<option value="value2">December</option>
-										<option value="value3">December</option>
+										<option value="">month</option>
+										<option value="12">January</option>
+										<option value="11">December</option>
+										<option value="10">November</option>
 									</select>
 									<select class="fieldset__select js-choice" name="year" id="year">
-										<option value="value1">1995</option>
-										<option value="value2">2022</option>
-										<option value="value3">2021</option>
+										<option value="">year</option>
+										<option value="2023">2023</option>
+										<option value="2022">2022</option>
+										<option value="2021">2021</option>
 									</select>
 								</div>
 							</fieldset>
@@ -103,13 +98,12 @@
 								<legend class="fieldset__legend">Gender</legend>
 								<div class="fieldset__list radio">
 									<div class="radio__item">
-										<input class="radio__btn" id="male" type="radio" name="gender" checked>
+										<input class="radio__btn -gender" id="male" type="radio" name="gender" value="male" checked>
 										<span class="radio__box"></span>
-
 										<label class="radio__label" for="male">Male</label>
 									</div>
 									<div class="radio__item">
-										<input class="radio__btn" id="female" type="radio" name="gender">
+										<input class="radio__btn -gender" id="female" type="radio" name="gender" value="female">
 										<span class="radio__box"></span>
 										<label class="radio__label" for="female">Female</label>
 									</div>
