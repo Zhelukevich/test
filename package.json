@@ -4,7 +4,7 @@
 	"description": "form test work",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"deploy": "gh-pages -d build"
 	},
 	"repository": {
 		"type": "git",
@@ -15,10 +15,11 @@
 	"bugs": {
 		"url": "https://github.com/Zhelukevich/test/issues"
 	},
-	"homepage": "https://github.com/Zhelukevich/test#readme",
+	"homepage": "https://Zhelukevich.github.io/test#readme",
 	"devDependencies": {
 		"browser-sync": "^2.28.1",
 		"del": "^6.0.0",
+		"gh-pages": "^5.0.0",
 		"gulp": "^4.0.2",
 		"gulp-autoprefixer": "^8.0.0",
 		"gulp-cssnano": "^2.1.3",
